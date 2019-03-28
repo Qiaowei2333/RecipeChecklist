@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Bread",
+        "description": "asdadasd",
+        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "ingredients": [
+            {
+                "name": "sugar",
+                "isChecked": false
+            },
+            {
+                "name": "flour",
+                "isChecked": false
+            }
+        ]
+    },
+    {        
+        "name": "Bread2",
+        "description": "asdadasd",
+        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "ingredients": [
+            {
+                "name": "sugar",
+                "isChecked": false
+            },
+            {
+                "name": "flour",
+                "isChecked": false
+            }
+        ]
+    },
+    {
+        "name": "Bread3",
+        "description": "asdadasd",
+        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "ingredients": [
+            {
+                "name": "sugar",
+                "isChecked": false
+            },
+            {
+                "name": "flour",
+                "isChecked": false
+            }
+        ]
+    }
+]
