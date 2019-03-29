@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [IngredientComponent]
 })
 export class AppModule { }

@@ -1,0 +1,7 @@
+button.close.pull-right {
+    outline: none;
+  }
+
+:host() {
+    min-width: 375px;
+}

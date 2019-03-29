@@ -1,4 +1,10 @@
-<p>
-  recipe works!
-  <app-ingredient></app-ingredient>
-</p>
+<div class="card-deck">
+  <div *ngFor="let recipe of recipes" class="card" >
+    <img src="{{recipe.imgURL}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{recipe.name}}</h5>
+      <p class="card-text">{{recipe.description}}</p>
+      <button type="button" class="btn btn-primary" (click)="openModalWithComponent(recipe)">Check Ingredients</button>
+    </div>
+  </div>
+</div>
