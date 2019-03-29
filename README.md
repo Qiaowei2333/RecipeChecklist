@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## How to run this application
 
-After pull from the repo, run "npm install", then run "ng serve -o".
+After clone from the repo, run "npm install", then run "ng serve -o".
 
 ## Development server
 
