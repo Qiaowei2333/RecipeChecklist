@@ -1,8 +1,8 @@
 [
     {
         "name": "Bread",
-        "description": "asdadasd",
-        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "description": "Bread is a staple food prepared from a dough of flour and water, usually by baking.",
+        "imgURL": "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps32480_MRR153791D09_18_6b-2.jpg",
         "ingredients": [
             {
                 "name": "sugar",
@@ -10,36 +10,88 @@
             },
             {
                 "name": "flour",
+                "isChecked": false
+            },
+            {
+                "name": "yeast",
+                "isChecked": false
+            },
+            {
+                "name": "salt",
+                "isChecked": false
+            },
+            {
+                "name": "canola oil",
                 "isChecked": false
             }
         ]
     },
     {        
-        "name": "Bread2",
-        "description": "asdadasd",
-        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "name": "Cake",
+        "description": "Cake is a form of sweet dessert that is typically baked. Cakes were modifications of breads, but cakes now cover a wide range of preparations that can be simple or elaborate.",
+        "imgURL": "https://www.tasteofhome.com/wp-content/uploads/2017/10/Mint-Patty-Cake_exps140673_CMT2426390C08_17_2b_RMS-1.jpg",
         "ingredients": [
             {
-                "name": "sugar",
+                "name": "cake flour",
                 "isChecked": false
             },
             {
-                "name": "flour",
+                "name": "baking powder",
+                "isChecked": false
+            },
+            {
+                "name": "salt",
+                "isChecked": false
+            },
+            {
+                "name": "buttermilk",
+                "isChecked": false
+            },
+            {
+                "name": "vanilla extract",
+                "isChecked": false
+            },
+            {
+                "name": "butter",
+                "isChecked": false
+            },
+            {
+                "name": "granulated sugar",
                 "isChecked": false
             }
         ]
     },
     {
-        "name": "Bread3",
-        "description": "asdadasd",
-        "imgURL": "http://cooksjoy.com/blog/wp-content/uploads/2013/12/Honey-Whole-Wheat-Oats-Bread-1.jpg",
+        "name": "Steak",
+        "description": "A steak is a meat generally sliced across the muscle fibers, potentially including a bone. ",
+        "imgURL": "https://www.jessicagavin.com/wp-content/uploads/2018/06/ribeye-steak-with-red-wine-sauce-3-1200.jpg",
         "ingredients": [
             {
-                "name": "sugar",
+                "name": "steak",
                 "isChecked": false
             },
             {
-                "name": "flour",
+                "name": "butter",
+                "isChecked": false
+            },
+            {
+                "name": "garlic",
+                "isChecked": false
+            },
+            {
+                "name": "parsley",
+                "isChecked": false
+            },
+            {
+                "name": "herb",
+                "isChecked": false
+            },
+            {
+                "name": "basil",
+                "isChecked": false
+            },
+            {
+                "name": "sea salt",
                 "isChecked": false
             }
         ]

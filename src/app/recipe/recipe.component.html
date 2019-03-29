@@ -1,10 +1,15 @@
 <div class="card-deck">
   <div *ngFor="let recipe of recipes" class="card" >
-    <img src="{{recipe.imgURL}}" class="card-img-top" alt="a recipe">
+    <div class="container">
+      <img src="{{recipe.imgURL}}" class="card-img-top" alt="a recipe">
+      <div class="overlay" (click)="openModalWithComponent(recipe)">
+        <div class="text">Check Ingredients</div>
+      </div>
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{recipe.name}}</h5>
       <p class="card-text">{{recipe.description}}</p>
-      <button type="button" class="btn btn-primary" (click)="openModalWithComponent(recipe)">Check Ingredients</button>
+      <!-- <button type="button" class="btn btn-primary" (click)="openModalWithComponent(recipe)">Check Ingredients</button> -->
     </div>
   </div>
 </div>
