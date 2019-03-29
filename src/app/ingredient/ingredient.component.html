@@ -4,11 +4,15 @@
     <span (click)="liked=!liked"><i class="far fa-heart" *ngIf="!liked"></i><i class="fas fa-heart" *ngIf="liked"></i></span>
 </div>
 <div class="modal-body">
-  <div *ngFor="let ingredient of recipe.ingredients" class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="{{ingredient.name}}">
-    <label class="custom-control-label" for="{{ingredient.name}}">{{ingredient.name}}</label>
+  <div>
+    <input type="checkbox" [(ngModel)]="allChecked" (change)="onChange()"><span class="font-weight-bold"> all</span>
+  </div>
+    
+  <div *ngFor="let ingredient of ingredients">
+    <input type="checkbox" [(ngModel)]="ingredient.isChecked" (change)="count(ingredient.isChecked)">
+    {{ingredient.name}}
   </div>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">close</button>
 </div>

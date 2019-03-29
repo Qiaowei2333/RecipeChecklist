@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../models/recipe.model';
+import { Recipe, Ingredient } from '../models/recipe.model';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { allocExpando } from '@angular/core/src/render3/instructions';
+import { RecipeComponent } from '../recipe/recipe.component';
 
 @Component({
   selector: 'app-ingredient',
@@ -8,17 +10,43 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./ingredient.component.css']
 })
 export class IngredientComponent implements OnInit {
-  title: string;
-  closeBtnName: string;
-  list: any[] = [];
   recipe: Recipe;
-  liked: boolean = false;
-
+  ingredients: Ingredient[];
+  liked: boolean;
+  allChecked: boolean;
+  sum: number;
+  
   constructor(public bsModalRef: BsModalRef) {}
  
   ngOnInit() {
-    this.list.push(this.recipe.name);
-    console.log(this.recipe.name);
+    this.liked = false;
+    this.allChecked = false;
+    this.ingredients = this.recipe.ingredients;
+    this.sum = 0;
+  }
+
+  onChange() {
+    if(this.allChecked) {
+      this.ingredients.forEach((ingredient)=>{ingredient.isChecked=true;});
+    }
+    else {
+      this.ingredients.forEach((ingredient)=>{ingredient.isChecked=false;});
+    }
+  }
+
+  count(isChecked: boolean) {
+    if(isChecked) {
+      this.sum += 1;
+      if(this.sum===this.ingredients.length){
+        this.allChecked = true;
+      }
+    }
+    else {
+      this.sum -= 1;
+      if(this.sum===this.ingredients.length-1) {
+        this.allChecked = false;
+      }
+    }
   }
 
 }

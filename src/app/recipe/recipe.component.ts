@@ -28,16 +28,8 @@ export class RecipeComponent implements OnInit {
  
   openModalWithComponent(selectedrecipe: Recipe) {
     const initialState = {
-      list: [
-        'Open a modal with component',
-        'Pass your data',
-        'Do something else',
-        '...'
-      ],
-      title: 'Modal with component',
       recipe: selectedrecipe
     };
     this.bsModalRef = this.modalService.show(IngredientComponent, {initialState});
-    this.bsModalRef.content.closeBtnName = 'Close';
   }
 }
