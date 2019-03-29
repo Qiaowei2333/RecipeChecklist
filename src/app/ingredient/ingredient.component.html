@@ -1,7 +1,7 @@
 
 <div class="modal-header">
     <h4 class="modal-title pull-left">{{recipe.name}}</h4>
-    <span (click)="liked=!liked"><i class="far fa-heart" *ngIf="!liked"></i><i class="fas fa-heart" *ngIf="liked"></i></span>
+    <span (click)="toggleLike()"><i class="far fa-heart" *ngIf="!liked"></i><i class="fas fa-heart" *ngIf="liked"></i></span>
 </div>
 <div class="modal-body">
   <div>

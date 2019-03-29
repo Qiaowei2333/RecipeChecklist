@@ -20,9 +20,17 @@ export class IngredientComponent implements OnInit {
  
   ngOnInit() {
     this.liked = false;
-    this.allChecked = false;
-    this.ingredients = this.recipe.ingredients;
     this.sum = 0;
+    this.ingredients = this.recipe.ingredients;
+    this.ingredients.forEach((ingredient)=>{
+      if(ingredient.isChecked===true)
+      this.sum++;
+    });
+    this.sum===this.ingredients.length ? this.allChecked = true : this.allChecked = false;
+  }
+
+  toggleLike() {
+    this.liked =!this.liked;
   }
 
   onChange() {
