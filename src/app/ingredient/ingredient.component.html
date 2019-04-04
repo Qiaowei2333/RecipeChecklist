@@ -5,11 +5,11 @@
 </div>
 <div class="modal-body">
   <div>
-    <input type="checkbox" [(ngModel)]="allChecked" (change)="onChange()"><span class="font-weight-bold"> all</span>
+    <input type="checkbox" [(ngModel)]="allChecked" (change)="toggleAll()"><span class="font-weight-bold"> all</span>
   </div>
     
   <div *ngFor="let ingredient of ingredients">
-    <input type="checkbox" [(ngModel)]="ingredient.isChecked" (change)="count(ingredient.isChecked)">
+    <input type="checkbox" [(ngModel)]="ingredient.isChecked" (change)="countCheckedIngredients(ingredient.isChecked)">
     {{ingredient.name}}
   </div>
 </div>

@@ -28,7 +28,8 @@ export class RecipeComponent implements OnInit {
  
   openModalWithComponent(selectedrecipe: Recipe) {
     const initialState = {
-      recipe: selectedrecipe
+      recipe: selectedrecipe,
+      
     };
     this.bsModalRef = this.modalService.show(IngredientComponent, {initialState});
   }

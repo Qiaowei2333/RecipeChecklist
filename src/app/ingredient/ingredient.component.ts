@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe, Ingredient } from '../models/recipe.model';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { allocExpando } from '@angular/core/src/render3/instructions';
-import { RecipeComponent } from '../recipe/recipe.component';
 
 @Component({
   selector: 'app-ingredient',
@@ -14,44 +12,46 @@ export class IngredientComponent implements OnInit {
   ingredients: Ingredient[];
   liked: boolean;
   allChecked: boolean;
-  sum: number;
+  sumOfCheckedIngredients: number;
   
   constructor(public bsModalRef: BsModalRef) {}
  
   ngOnInit() {
     this.liked = false;
-    this.sum = 0;
+    this.sumOfCheckedIngredients = 0;
     this.ingredients = this.recipe.ingredients;
-    this.ingredients.forEach((ingredient)=>{
-      if(ingredient.isChecked===true)
-      this.sum++;
-    });
-    this.sum===this.ingredients.length ? this.allChecked = true : this.allChecked = false;
+    // this.ingredients.forEach((ingredient)=>{
+    //   if(ingredient.isChecked===true)
+    //   this.sum++;
+    // });
+    // this.sum===this.ingredients.length ? this.allChecked = true : this.allChecked = false;
   }
 
   toggleLike() {
     this.liked =!this.liked;
   }
 
-  onChange() {
+  toggleAll() {
     if(this.allChecked) {
+      this.sumOfCheckedIngredients = this.ingredients.length;
       this.ingredients.forEach((ingredient)=>{ingredient.isChecked=true;});
     }
     else {
+      this.sumOfCheckedIngredients = 0;
       this.ingredients.forEach((ingredient)=>{ingredient.isChecked=false;});
     }
   }
 
-  count(isChecked: boolean) {
+  countCheckedIngredients(isChecked: boolean) {
     if(isChecked) {
-      this.sum += 1;
-      if(this.sum===this.ingredients.length){
+      this.sumOfCheckedIngredients += 1;
+      if(this.sumOfCheckedIngredients === this.ingredients.length){
         this.allChecked = true;
       }
     }
     else {
-      this.sum -= 1;
-      if(this.sum===this.ingredients.length-1) {
+      this.sumOfCheckedIngredients -= 1;
+      if(this.sumOfCheckedIngredients === this.ingredients.length-1) {
         this.allChecked = false;
       }
     }
